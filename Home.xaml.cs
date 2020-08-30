@@ -37,9 +37,13 @@ namespace QuizAndresBonilla
             var item = (ComboBoxItem)finished.SelectedValue;
             var content = (string)item.Content;
 
-            txtResults.Text = animeName + "\n"+ category + "\nChapther: " 
+            var add = animeName + "\n"+ category + "\nChapther: " 
                 + numberOfChapter + "\nPublication Date: " + publicationDate
                 + "\nYou Finished It?: " + content;
+            txtResults.Inlines.Add(new Run(add));
+            txtResults.Inlines.Add(new LineBreak());
+
+
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
