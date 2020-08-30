@@ -15,5 +15,6 @@
         <TextBox Name="txtUsername" HorizontalAlignment="Center" Margin="0,123,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <PasswordBox Name="txtPassword" HorizontalAlignment="Center" Margin="0,183,0,0" VerticalAlignment="Top" Width="120"/>
         <Button Name="btnLogin" Content="Log in" HorizontalAlignment="Center" Margin="0,226,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="btnLogin_Click"/>
+
     </Grid>
 </Page>

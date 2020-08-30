@@ -8,17 +8,17 @@
       d:DesignHeight="340" d:DesignWidth="790"
       Title="Home" Background="#FFFFB3B3">
 
-    <Grid Margin="0,0,0,33" Height="340" RenderTransformOrigin="-0.122,1.268">
+    <Grid RenderTransformOrigin="-0.122,1.268">
 
-        <TextBlock Name="txtResults" HorizontalAlignment="Left" Margin="520,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="297" Width="248" Background="White"/>
-        <Label Content="Anime name" HorizontalAlignment="Left" Margin="43,21,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtAnimeName"  HorizontalAlignment="Left" Margin="125,25,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock Name="txtResults" HorizontalAlignment="Left" Margin="521,21,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="282" Width="248" Background="White"/>
+        <Label Content="Anime name" HorizontalAlignment="Left" Margin="43,10,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtAnimeName"  HorizontalAlignment="Left" Margin="125,14,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="48,283,0,0" VerticalAlignment="Top" Width="111" Click="btnSave_Click"/>
-        <RadioButton GroupName="category" Content="Fantasy" HorizontalAlignment="Left" Margin="389,69,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
-        <RadioButton GroupName="category" Content="Adventure" HorizontalAlignment="Left" Margin="389,89,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
-        <Label Content="Category" HorizontalAlignment="Left" Margin="326,62,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.616"/>
-        <Label Name="lblCategory" Visibility="Hidden" Content="Label" HorizontalAlignment="Left" Margin="72,74,0,0" VerticalAlignment="Top"/>
-        <Calendar SelectedDatesChanged = "Calendar_SelectedDatesChanged" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,52,0,0"/>
+        <RadioButton GroupName="category" Content="Fantasy" HorizontalAlignment="Left" Margin="395,15,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton GroupName="category" Content="Adventure" HorizontalAlignment="Left" Margin="395,30,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <Label Content="Category" HorizontalAlignment="Left" Margin="332,7,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.616"/>
+        <Label Name="lblCategory" Visibility="Hidden" Content="" HorizontalAlignment="Left" Margin="72,74,0,0" VerticalAlignment="Top"/>
+        <Calendar SelectedDatesChanged = "Calendar_SelectedDatesChanged" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,45,0,0"/>
         <Slider Name="slpNumberOfChapthers" ValueChanged = "SlpNumberOfChapthers_ValueChanged" HorizontalAlignment="Left" Margin="125,228,0,0" VerticalAlignment="Top" Width="218" Value="0" Minimum="0" Maximum="50"  SmallChange="1" LargeChange="10" TickPlacement="BottomRight" TickFrequency="5" />
         <Label Content="Number of chapters" HorizontalAlignment="Left" Margin="9,222,0,0" VerticalAlignment="Top"/>
         <Label Content="0" HorizontalAlignment="Left" Margin="122,245,0,0" VerticalAlignment="Top" Width="17"/>
@@ -32,17 +32,27 @@
         <Label Content="40" HorizontalAlignment="Left" Margin="285,245,0,0" VerticalAlignment="Top"/>
         <Label Content="45" HorizontalAlignment="Left" Margin="305,245,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,0.559"/>
         <Label Content="50" HorizontalAlignment="Left" Margin="326,245,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtSlider" Visibility="Hidden" HorizontalAlignment="Left" Margin="18,222,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Publication Date" HorizontalAlignment="Left" Margin="23,59,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtCalendar" Visibility="Hidden" HorizontalAlignment="Left" Margin="375,210,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="You Finished It?" HorizontalAlignment="Left" Margin="326,116,0,0" VerticalAlignment="Top"/>
-        <ComboBox Name = "finished" HorizontalAlignment = "Left" Margin = "418,120,0,0" VerticalAlignment = "Top" Width = "54" Height = "22">
-            <ComboBoxItem Content = "Yes" />
+        <TextBox Name="txtSlider" Visibility="Hidden" HorizontalAlignment="Left" Margin="18,222,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Publication Date" HorizontalAlignment="Left" Margin="23,43,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtCalendar" Visibility="Hidden" HorizontalAlignment="Left" Margin="375,210,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="You Finished It?" HorizontalAlignment="Left" Margin="326,194,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name = "finished" HorizontalAlignment = "Left" Margin = "418,198,0,0" VerticalAlignment = "Top" Width = "54" Height = "22">
+            <ComboBoxItem IsSelected="True" Content = "Yes" />
             <ComboBoxItem Content = "No" />
         </ComboBox>
         <TextBox Name="txtCheckBox" Visibility="Hidden"  HorizontalAlignment="Left" Margin="39,163,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="185,283,0,0" VerticalAlignment="Top" Width="111" RenderTransformOrigin="0.514,0.601" Click="btnClear_Click"/>
         <Button Name="btnLogout" Content="Log out" HorizontalAlignment="Left" Margin="326,283,0,0" VerticalAlignment="Top" Width="111" Click="btnLogout_Click"/>
-
+        <Label Content="List Anime" HorizontalAlignment="Left" Margin="517,-1,0,0" VerticalAlignment="Top"/>
+        <RadioButton GroupName="category" Content="Comedy" HorizontalAlignment="Left" Margin="395,45,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton GroupName="category" Content="Demons" HorizontalAlignment="Left" Margin="395,60,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton GroupName="category" Content="Historical" HorizontalAlignment="Left" Margin="395,75,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton GroupName="category" Content="Mystery" HorizontalAlignment="Left" Margin="395,90,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton GroupName="category" Content="Romance" HorizontalAlignment="Left" Margin="395,105,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton GroupName="category" Content="Shounen" HorizontalAlignment="Left" Margin="395,120,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton GroupName="category" Content="Seinen" HorizontalAlignment="Left" Margin="395,135,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton GroupName="category" Content="Action" HorizontalAlignment="Left" Margin="395,151,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton GroupName="category" Content="Magic" HorizontalAlignment="Left" Margin="395,166,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        
     </Grid>
 </Page>

@@ -24,20 +24,28 @@ namespace QuizAndresBonilla
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
-        {
+        {   
+            
             string animeName = txtAnimeName.Text;
             string category = lblCategory.Content.ToString();
             string numberOfChapter = txtSlider.Text;
             string publicationDate = txtCalendar.Text;
             var item = (ComboBoxItem)finished.SelectedValue;
             var content = (string)item.Content;
-
-            var add = animeName + "\n"+ category + "\nChapther: " 
-                + numberOfChapter + "\nPublication Date: " + publicationDate
-                + "\nYou Finished It?: " + content;
-            txtResults.Inlines.Add(new Run(add));
-            txtResults.Inlines.Add(new LineBreak());
-
+            if (animeName == "" | category == "" | numberOfChapter == "" | publicationDate == "" | content == "")
+            {
+                MessageBox.Show("Empty spaces");
+            }
+            else
+            {
+                var add = animeName + "\n" + category + "\nChapther: "
+                    + numberOfChapter + "\nPublication Date: " + publicationDate
+                    + "\nYou Finished It?: " + content;
+                txtResults.Inlines.Add(new Run(add));
+                txtResults.Inlines.Add(new LineBreak());
+                txtResults.Inlines.Add(new Run("--------------------------------------------------"));
+                txtResults.Inlines.Add(new LineBreak());
+            }
 
         }
 
