@@ -32,7 +32,14 @@ namespace QuizAndresBonilla
         {
             string animeName = txtAnimeName.Text;
             string category = lblCategory.Content.ToString();
-            txtResults.Text = category+"\n"+animeName;
+            string numberOfChapter = txtSlider.Text;
+            string publicationDate = txtCalendar.Text;
+            var item = (ComboBoxItem)finished.SelectedValue;
+            var content = (string)item.Content;
+
+            txtResults.Text = animeName + "\n"+ category + "\nChapther: " 
+                + numberOfChapter + "\nPublication Date: " + publicationDate
+                + "\nYou Finished It?: " + content;
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
@@ -41,6 +48,24 @@ namespace QuizAndresBonilla
             if (rb.IsChecked.Value)
             {
                 lblCategory.Content = rb.Content.ToString();
+            }
+        }
+
+        private void SlpNumberOfChapthers_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            int val = Convert.ToInt32(e.NewValue);
+            string msgNumberOfChapter = String.Format("{0}", val);
+            txtSlider.Text = msgNumberOfChapter;
+        }
+
+        private void Calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var calPublicationDate = sender as Calendar;
+
+            if (calPublicationDate.SelectedDate.HasValue)
+            {
+                DateTime date = calPublicationDate.SelectedDate.Value;
+                txtCalendar.Text = date.ToShortDateString();
             }
         }
     }
