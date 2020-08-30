@@ -25,11 +25,6 @@ namespace QuizAndresBonilla
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void btnSave_Click_1(object sender, RoutedEventArgs e)
-        {
             string animeName = txtAnimeName.Text;
             string category = lblCategory.Content.ToString();
             string numberOfChapter = txtSlider.Text;
@@ -44,6 +39,17 @@ namespace QuizAndresBonilla
             txtResults.Inlines.Add(new LineBreak());
 
 
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            txtResults.Text = string.Empty;
+        }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow w = (MainWindow)Window.GetWindow(this);
+            w.frameMain.NavigationService.Navigate(new Login());
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
@@ -72,5 +78,7 @@ namespace QuizAndresBonilla
                 txtCalendar.Text = date.ToShortDateString();
             }
         }
+
+        
     }
 }
